@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Builders Company</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="header.css" />
+  <link rel="stylesheet" type="text/css" href="home.css" />
+  <link rel="stylesheet" type="text/css" href="projects.css" />
+  <link rel="stylesheet" type="text/css" href="contact.css" />
+  <link rel="stylesheet" type="text/css" href="glide.min.css" />
+  <script src="glide.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Glide(".glide", {
+        type: "carousel",
+        perView: 1,
+        autoplay: 5000,
+        hoverpause: true,
+      }).mount();
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="banner">
+      <h1 class="company-name">BuilderZ</h1>
+      <div class="contact-info">
+        <h3 class="info-item">Opening Hours:</h3>
+        Mon-Fri 9am-6pm
+        <h3 class="info-item">Call Us:</h3>
+        +1 123-456-7890
+        <h3 class="info-item">Email Us:</h3>
+        info@builderz.com
+      </div>
+    </div>
+    <nav>
+      <ul class="navigation-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>
+      We offer a range of services for building dream homes, wonderful
+      offices, and amazing schools and universities.
+    </p>
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img
+                src="./props/residential-construction.jpg"
+                alt="Residential Construction"
+              />
+              <div class="slide-content">
+                <h3>Residential Construction</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                  similique repudiandae minus accusantium, eos id asperiores
+                  nostrum voluptates autem minima magnam, corporis pariatur illo
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt fuga amet dolore voluptatibus unde velit, itaque odio
+                  aut expedita, debitis delectus nemo eaque dicta.
+                </p>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <img
+                src="./props/commercial-construction.jpg"
+                alt="Commercial Construction"
+              />
+              <div class="slide-content">
+                <h3>Commercial Construction</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                  aliquam in harum eos, accusantium modi quaerat voluptates
+                  facere neque facilis ex earum dolorum non?
+                </p>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <img
+                src="./props/educational-institutions.jpg"
+                alt="Educational Institutions"
+              />
+              <div class="slide-content">
+                <h3>Educational Institutions</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Beatae, debitis rerum rem, est veniam quos deserunt temporibus
+                  aliquam dignissimos sunt amet suscipit minus dolorem.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
+      </div>
+  </section>
+
+  <section id="projects">
+    <h2>Our Projects</h2>
+    <h2>Take a look at some of our completed projects.</h2>
+    <div class="project">
+      <img src="./props/project1.jpg" alt="Project 1" />
+      <div class="project-details">
+        <h3>Project 1</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+          veritatis consequuntur non consequatur quas dolor repudiandae
+          cupiditate quia optio recusanda. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Incidunt, eum.
+        </p>
+        <a href="#" class="view-details">View Details</a>
+      </div>
+    </div>
+    <div class="project">
+      <img src="./props/project2.jpg" alt="Project 2" />
+      <div class="project-details">
+        <h3>Project 2</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+          veritatis consequuntur non consequatur quas dolor repudiandae
+          cupiditate quia optio recusanda. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Incidunt, eum.</p>
+        <a href="#" class="view-details">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for any inquiries or project discussions.</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Builders Company. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task 8</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+          rgb(240, 240, 114),
+          rgb(221, 63, 174)
+        );
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .flex{
+        display: flex;
+        gap: 10px;
+      }
+      h2 {
+        text-align: center;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      label {
+        margin-top: 10px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      input[type="tel"],
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid;
+        border-radius: 4px;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      input[type="button"] {
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .error {
+        color: red;
+      }
+
+      #output {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    </style>
+    <script>
+      function validateForm() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var rePassword = document.getElementById("rePassword").value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+        var age = document.getElementById("age").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var address = document.getElementById("address").value;
+        var state = document.getElementById("state").value;
+        var country = document.getElementById("country").value;
+        var languages = document.querySelectorAll(
+          'input[name="languages"]:checked'
+        );
+        var declaration = document.getElementById("declaration").checked;
+
+        document.getElementById("firstNameError").innerHTML =
+          firstName === "" ? "POOR" : "";
+        document.getElementById("lastNameError").innerHTML =
+          lastName === "" ? "POOR" : "";
+        document.getElementById("emailError").innerHTML =
+          email === "" ? "POOR" : "";
+        document.getElementById("passwordError").innerHTML =
+          password === "" ? "POOR" : "";
+        document.getElementById("rePasswordError").innerHTML =
+          rePassword === "" ? "POOR" : "";
+        document.getElementById("genderError").innerHTML =
+          gender === null ? "POOR" : "";
+        document.getElementById("ageError").innerHTML =
+          age === "" ? "POOR" : "";
+        document.getElementById("phoneNumberError").innerHTML =
+          phoneNumber === "" ? "POOR" : "";
+        document.getElementById("addressError").innerHTML =
+          address === "" ? "POOR" : "";
+        document.getElementById("stateError").innerHTML =
+          state === "" ? "POOR" : "";
+        document.getElementById("countryError").innerHTML =
+          country === "" ? "POOR" : "";
+        document.getElementById("languagesError").innerHTML =
+          languages.length === 0 ? "POOR" : "";
+        document.getElementById("declarationError").innerHTML = !declaration
+          ? "POOR"
+          : "";
+
+        var isValid = !(
+          firstName === "" ||
+          lastName === "" ||
+          email === "" ||
+          password === "" ||
+          rePassword === "" ||
+          gender === null ||
+          age === "" ||
+          phoneNumber === "" ||
+          address === "" ||
+          state === "" ||
+          country === "" ||
+          languages.length === 0 ||
+          !declaration
+        );
+
+        document.getElementById("output").innerHTML = isValid ? "POOR" : "";
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 style="color: blue">Registration Form</h2>
+      <form>
+        <div class="flex">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required />
+          <span id="firstNameError" class="error"></span>
+        </div>
+        <br />
+        <div class="flex">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+          <span id="lastNameError" class="error"></span>
+        </div>
+        <br />
+        <div class="flex">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <span id="emailError" class="error"></span>
+        </div>
+        <br />
+        <div class="flex">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <span id="passwordError" class="error"></span>
+        </div>
+        <br />
+        <div class="flex">
+          <label for="rePassword">Re-enter Password:</label>
+          <input type="password" id="rePassword" name="rePassword" required />
+          <span id="rePasswordError" class="error"></span>
+        </div>
+        <br />
+        <div class="flex">
+
+            <label>Gender:</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required />
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other" required />
+            <span id="genderError" class="error"></span>
+        </div>
+        <br /><br />
+            <div class="flex">
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required />
+                <span id="ageError" class="error"></span>
+            </div>
+            <br />
+                <div class="flex">
+            
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required />
+            <span id="phoneNumberError" class="error"></span>
+        </div>
+        <br />
+            <div class="flex">
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required />
+            <span id="addressError" class="error"></span>
+        </div>
+        <br />
+            <div class="flex">
+            
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required />
+            <span id="stateError" class="error"></span>
+        </div>
+        <br />
+            <div class="flex">
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+            </select>
+            <span id="countryError" class="error"></span>
+        </div>
+        <br /><br />
+        <div class="flex">
+
+            <label>Languages:</label>
+            <label for="english">English</label>
+        <input type="checkbox" id="english" name="languages" value="english" />
+        <label for="spanish">Kannada</label>
+        <input type="checkbox" id="spanish" name="languages" value="spanish" />
+        <label for="french">Hindi</label>
+        <input type="checkbox" id="french" name="languages" value="french" />
+        <span id="languagesError" class="error"></span>
+    </div>
+    <br /><br />
+        <div class="flex">
+
+            <input type="checkbox" id="declaration" name="declaration" required />
+            <label for="declaration">Declaration:</label>
+            <span id="declarationError" class="error"></span>
+        </div>
+        <br />
+
+        <input type="button" value="Submit" onclick="validateForm()" />
+
+        <p id="output"></p>
+      </form>
+    </div>
+  </body>
+</html>

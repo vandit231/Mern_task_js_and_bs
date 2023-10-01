@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="num1">Number 1: </label>
+        <input type="number" id="num1"><br>
+        <label for="num2">Number 2: </label>
+        <input type="number" id="num2"><br><br>
+        <button id="add">Add</button><button id="mul">Multiply</button>
+    </form><br><br>
+    <div id="answer"></div>
+    <script>
+        document.getElementById("add").onclick = function () {
+        let ele1 = parseFloat(document.getElementById("num1").value);
+        let ele2 = parseFloat(document.getElementById("num2").value);
+        if (!isNaN(ele1) && !isNaN(ele2)) {
+            let answer = ele1 + ele2;
+            document.getElementById("answer").innerHTML = "Result: " + answer;
+        } else {
+            document.getElementById("answer").innerHTML = "Please enter valid numbers.";
+        }
+        return false;
+    }
+    document.getElementById("mul").onclick = function () {
+        let ele1 = parseFloat(document.getElementById("num1").value);
+        let ele2 = parseFloat(document.getElementById("num2").value);
+        if (!isNaN(ele1) && !isNaN(ele2)) {
+            let answer = ele1 * ele2;
+            document.getElementById("answer").innerHTML = "Result: " + answer;
+        } else {
+            document.getElementById("answer").innerHTML = "Please enter valid numbers.";
+        }
+        return false;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Header Styling */
+header {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .banner {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .company-name {
+    color: #114477;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #114477;
+    font-size: 14px;
+  }
+  
+  .contact-info h3 {
+    margin: 0;
+    margin-left: 15px;
+    font-weight: bold;
+  }
+  
+  /* Add space between headings and information */
+  .contact-info .info {
+    margin-left: 10px;
+  }
+  
+  /* Navigation Styling */
+  nav {
+    background-color: #333;
+    padding: 10px 0;
+  }
+  
+  .navigation-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .navigation-menu li {
+    margin-right: 20px;
+  }
+  
+  .navigation-menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .navigation-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .navigation-menu li a:hover {
+    color: #114477;
+  }
+  

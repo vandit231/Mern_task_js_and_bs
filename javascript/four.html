@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="date">show date</button><br>
+    <div id="gives_date"></div><br>
+    <button id="time">show time</button><br>
+    <div id="gives_time"></div>
+    <script>
+        
+        let date = new Date().getDate();
+        let month =(new Date()).getMonth()+ 1
+        let year=new Date().getFullYear();
+        
+        document.getElementById("date").onclick=function(){
+            var date = new Date().getDate();
+            var month =(new Date()).getMonth()+ 1
+            var year=new Date().getFullYear();
+            var fulldate=date+"/"+month+"/"+year
+            document.getElementById("gives_date").innerHTML=fulldate;
+            return false;
+
+        }
+        document.getElementById("time").onclick=function(){
+            var time=new Date().getTime();
+            document.getElementById("gives_time").innerHTML=time;
+            return false;
+
+        }
+    </script>
+</body>
+</html>

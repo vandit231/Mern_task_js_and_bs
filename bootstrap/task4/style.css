@@ -1,0 +1,6 @@
+.col{
+    transition: transform 0.5s ease-in 0s;
+}
+.col:hover{
+    transform: scale(1.1);
+}

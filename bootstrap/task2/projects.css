@@ -1,0 +1,53 @@
+#projects {
+    background-color: rgb(219, 219, 20);
+    color: darkblue;
+    padding: 50px;
+  }
+  
+  #projects h2 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: whitesmoke;
+  }
+  
+  .project img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .project-details {
+    flex: 1;
+  }
+  
+  .project-details h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  
+  .project-details p {
+    margin-bottom: 10px;
+  }
+  
+  .view-details {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .view-details:hover {
+    background-color: darkblue;
+  }

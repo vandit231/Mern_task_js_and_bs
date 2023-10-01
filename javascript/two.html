@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2</title>
+  <script>
+    function sortStringAlphabetically() {
+      var input = document.getElementById('inputString').value;
+      var sortedString = input.split('').sort().join('');
+      document.getElementById('result').textContent = sortedString;
+    }
+  </script>
+</head>
+<body>
+  <h1>Sort String Alphabetically</h1>
+  <input type="text" id="inputString" placeholder="Enter a string">
+  <button onclick="sortStringAlphabetically()">Sort</button>
+  <p id="result"></p>
+</body>
+</html>

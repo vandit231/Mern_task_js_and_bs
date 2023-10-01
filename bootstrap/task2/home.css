@@ -1,0 +1,105 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 40px;
+  }
+  
+  section h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #fff;
+  }
+  #services {
+    background-color: darkblue;
+    color: white;
+    padding: 50px;
+  }
+  
+  #services h2 {
+    color: goldenrod;
+    font-size: 2rem;
+  }
+  
+  #services p {
+    font-size: 1.2rem;
+  }
+  
+  .slide-content {
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .slide-content h3 {
+    color: goldenrod;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  .slide-content p {
+    font-size: 1.2rem;
+  }
+  
+  .glide__slides img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .glide {
+    margin-bottom: 30px;
+  }
+  .glide__slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .glide__bullets {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .glide__bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .glide__bullet--active {
+    background-color: #333;
+  }
